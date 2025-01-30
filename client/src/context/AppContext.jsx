@@ -49,6 +49,10 @@ const AppContextProvider = (props) => {
   }, [token, credit]);
   const removeBg = async (image) => {
     try {
+      if (!token) {
+        setShowLogin(true);
+        return;
+      }
       setImage(image);
       setResultImage(false);
       setLoading(true);
