@@ -15,7 +15,7 @@ await connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://photo-wipe-self.vercel.app/",
+    origin: "https://photo-wipe-self.vercel.app",
     methods: ["GET", "POST", "DELETE"],
     credentials: true,
   })
