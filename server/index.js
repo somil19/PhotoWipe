@@ -7,13 +7,19 @@ import "dotenv/config";
 
 //App Config
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 await connectDB();
 
 //Initialize Middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://photo-wipe-self.vercel.app/",
+    methods: ["GET", "POST", "DELETE"],
+    credentials: true,
+  })
+);
 
 // API routes
 app.get("/", (req, res) => res.send("API Working"));
