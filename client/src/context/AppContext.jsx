@@ -14,7 +14,8 @@ const AppContextProvider = (props) => {
   const [image, setImage] = useState(false);
   const [resultImage, setResultImage] = useState(false);
   const [resultImageUrl, setResultImageUrl] = useState("");
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  const backendUrl =
+    import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
   const [loading, setLoading] = useState(false);
   const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
