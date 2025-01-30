@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import "tailwindcss";
+* {
+  font-family: "Merriweather", serif;
+  font-feature-settings: "lnum";
+  font-weight: 400;
+  font-style: normal;
+}
+.slider {
+  -webkit-appearance: none;
+  height: 100%;
+  background: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 30px;
+  min-height: 30px;
+  background-image: url(/slide_icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: grab;
+}
+
+.bg-layer {
+  background-image: url(/bg_layer.png);
+}
